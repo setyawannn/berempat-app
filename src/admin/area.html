@@ -416,11 +416,6 @@
       font-weight: 600;
     }
 
-    .user-img  {
-      width: auto;
-    }
-
-
     /* Content Area */
     .content-area {
       padding: 2rem;
@@ -817,14 +812,17 @@
           <div class="col-12">
             <div class="d-flex justify-content-between align-items-center">
               <div>
-                <h1 class="h3 mb-2" style="color: var(--text-color); font-weight: 600;">My Profile</h1>
+                <h1 class="h3 mb-2" style="color: var(--text-color); font-weight: 600;">List Area</h1>
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">My Profile</li>
+                    <li class="breadcrumb-item active" aria-current="page">Area</li>
                   </ol>
                 </nav>
               </div>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addUserModal">
+                <i class="fas fa-plus me-2"></i>Add Area
+              </button>
             </div>
           </div>
         </div>
@@ -833,54 +831,135 @@
         <div class="row">
           <div class="col-12">
             <div class="dashboard-card fade-in">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img class="w-100 rounded-2" src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                    </div>
-                    <div class="col-md-8">
-                        <form>
-                            <div class="mb-3">
-                                <label for="editName" class="form-label">Full Name</label>
-                                <input type="text" class="form-control" id="editName" value="John Doe">
-                            </div>
-                            <div class="mb-3">
-                                <label for="editEmail" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="editEmail" value="john@example.com">
-                            </div>
-                            <div class="mb-3">
-                                <label for="editUsername" class="form-label">Username</label>
-                                <input type="text" class="form-control" id="editUsername" value="johndoe">
-                            </div>
-                            <div class="mb-3">
-                                <label for="editPassword" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="editPassword" placeholder="Leave blank to keep current password">
-                            </div>
-                            <div class="mb-3">
-                                <label for="editRole" class="form-label">Role</label>
-                                <select class="form-select" id="editRole">
-                                    <option value="admin" selected>Admin</option>
-                                    <option value="team_leader">Team Leader</option>
-                                    <option value="warehouse_manager">Warehouse Manager</option>
-                                    <option value="surveyor">Surveyor</option>
-                                    <option value="deliverman">Deliverman</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label for="img" class="form-label">Photo Profile</label>
-                                <input class="form-control" type="file" id="img">
-                            </div>
-                            <div class="float-end">
-                                <button type="submit" class="btn btn-primary">Save Changes</button>
-                            </div>
-                        </form>
-                    </div> 
+              <div class="card-header">
+                <h5 class="card-title">All Areas</h5>
+                <div class="d-flex">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search area...">
+                    <button class="btn btn-outline-secondary" type="button">
+                      <i class="fas fa-search"></i>
+                    </button>
+                  </div>
                 </div>
-                               
+              </div>
+              <div class="table-responsive">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th width="5%">No</th>
+                      <th width="30%">Name</th>
+                      <th width="20%">Region</th>
+                      <th width="20%">Created</th>
+                      <th width="15%">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Malang</td>
+                      <td>Jawa Timur</td>
+                      <td>9 Mei 2025</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editUserModal">
+                          <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
+                          <i class="fas fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Kediri</td>
+                      <td>Jawa Timur</td>
+                      <td>11 Mei 2025</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editUserModal">
+                          <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
+                          <i class="fas fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Surabaya</td>
+                      <td>Jawa Timur</td>
+                      <td>12 Mei 2025</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editUserModal">
+                          <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
+                          <i class="fas fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Denpasar</td>
+                      <td>Bali</td>
+                      <td>12 Mei 2025</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editUserModal">
+                          <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
+                          <i class="fas fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>Solo</td>
+                      <td>Jawa Tengah</td>
+                      <td>12 Mei 2025</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editUserModal">
+                          <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
+                          <i class="fas fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Wonosobo</td>
+                        <td>Jawa Tengah</td>
+                        <td>13 Mei 2025</td>
+                        <td>
+                          <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editUserModal">
+                            <i class="fas fa-edit"></i>
+                          </button>
+                          <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
+                            <i class="fas fa-trash"></i>
+                          </button>
+                        </td>
+                      </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="card-footer">
+                <nav aria-label="Page navigation">
+                  <ul class="pagination justify-content-end mb-0">
+                    <li class="page-item disabled">
+                      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">Next</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
     </main>
   </div>
 
@@ -892,18 +971,15 @@
 
   <script>
     $(document).ready(function () {
-      // Existing sidebar toggle code
       $('#sidebarToggle').on('click', function () {
         const sidebar = $('#sidebar');
         const mainContent = $('#mainContent');
         const sidebarOverlay = $('#sidebarOverlay');
 
         if ($(window).width() <= 768) {
-          // Mobile behavior
           sidebar.toggleClass('show');
           sidebarOverlay.toggleClass('show');
         } else {
-          // Desktop behavior
           sidebar.toggleClass('collapsed');
           mainContent.toggleClass('sidebar-collapsed');
         }
@@ -918,7 +994,6 @@
         e.preventDefault();
         const parent = $(this).parent();
         
-        // Toggle submenu
         if (!$('#sidebar').hasClass('collapsed')) {
           parent.toggleClass('open');
           parent.find('.submenu').toggleClass('open');
@@ -932,7 +1007,6 @@
         $('.menu-link, .submenu-link').removeClass('active');
         $('.menu-item').removeClass('has-active-submenu');
         
-        // Check for exact matches first (for main menu items)
         $('.menu-link').each(function() {
           const href = $(this).attr('href');
           if (href === filename || href === currentUrl) {
@@ -940,14 +1014,11 @@
           }
         });
         
-        // Then check for submenu items
         $('.submenu-link').each(function() {
           const href = $(this).attr('href');
           if (href === filename || href === currentUrl) {
             $(this).addClass('active');
-            // Also mark parent as having active submenu
             $(this).closest('.menu-item').addClass('has-active-submenu');
-            // Open the submenu
             if (!$('#sidebar').hasClass('collapsed')) {
               $(this).closest('.submenu').addClass('open');
               $(this).closest('.has-submenu').addClass('open');
@@ -955,32 +1026,25 @@
           }
         });
         
-        // If no match found, default to dashboard
         if (!$('.menu-link.active, .submenu-link.active').length) {
           $('[href="index.html"]').addClass('active');
         }
       }
       
-      // Call on page load
       setActiveMenu();
       
-      // Handle menu clicks with animation
       $('.menu-link:not(.has-submenu > .menu-link), .submenu-link').on('click', function (e) {
-        // Only prevent default if it's a dummy link
         if ($(this).attr('href') === '#') {
           e.preventDefault();
         }
 
-        // Add active class to clicked item
         $('.menu-link, .submenu-link').removeClass('active');
         $(this).addClass('active');
         
-        // If it's a submenu link, mark parent
         if ($(this).hasClass('submenu-link')) {
           $(this).closest('.menu-item').addClass('has-active-submenu');
         }
 
-        // Add smooth animation
         $(this).addClass('slide-in-left');
         setTimeout(() => {
           $(this).removeClass('slide-in-left');
@@ -992,7 +1056,6 @@
         }
       });
 
-      // Existing search input code
       $('.search-input').on('focus', function () {
         $(this).parent().addClass('focused');
       }).on('blur', function () {
