@@ -811,104 +811,154 @@
     <!-- Content Area -->
     <main class="content-area">
       <div class="container-fluid">
-        <!-- Stats Cards -->
-        <div class="row mb-4">
-          <div class="col-xl-3 col-md-6 mb-4">
-            <div class="dashboard-card stat-card slide-in-left">
-              <div class="stat-icon" style="background: linear-gradient(135deg, var(--primary-color), #6fa7fc);" >
-                <i class="fas fa-users"></i>
+        <div class="row">
+          <div class="col-md-9">
+              <div class="row mb-4">
+                <div class="col-xl-4 col-md-6 mb-4">
+                  <div class="dashboard-card stat-card slide-in-left">
+                    <div class="stat-icon" style="background: linear-gradient(135deg, var(--primary-color), #6fa7fc);" >
+                      <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number">420</div>
+                    <div class="stat-label">Total Users</div>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-md-6 mb-4">
+                  <div class="dashboard-card stat-card slide-in-left" style="animation-delay: 0.1s;">
+                    <div class="stat-icon" style="background: linear-gradient(135deg, var(--success-color), #34d399);">
+                      <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number">150</div>
+                    <div class="stat-label">Active Surveyor</div>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-md-6 mb-4">
+                  <div class="dashboard-card stat-card slide-in-left" style="animation-delay: 0.2s;">
+                    <div class="stat-icon" style="background: linear-gradient(135deg, var(--warning-color), #fbbf24);">
+                      <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number">270</div>
+                    <div class="stat-label">Active Deliverman</div>
+                  </div>
+                </div>
               </div>
-              <div class="stat-number">420</div>
-              <div class="stat-label">Total Users</div>
-            </div>
+
+              <!-- Charts Section -->
+              <div class="row mb-4">
+                <div class="col-xl-12 mb-4">
+                  <div class="dashboard-card fade-in pb-2">
+                    <div class="card-header">
+                      <h5 class="card-title">Develiver Overview</h5>
+                      <div class="dropdown">
+                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button">
+                          Last 7 days
+                        </button>
+                      </div>
+                    </div>
+                    <div class="chart-container" style="position: relative; height:300px; padding: 20px;">
+                      <canvas id="salesStockChart"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
           </div>
-          <div class="col-xl-3 col-md-6 mb-4">
-            <div class="dashboard-card stat-card slide-in-left" style="animation-delay: 0.1s;">
-              <div class="stat-icon" style="background: linear-gradient(135deg, var(--success-color), #34d399);">
-                <i class="fas fa-users"></i>
+          <div class="col-md-3">
+            <div class="row mb-4">
+              <div class="col-xl-12">
+                <div class="dashboard-card fade-in">
+                  <div class="card-header">
+                    <h5 class="card-title">Journey Plan Proggress</h5>
+                  </div>
+                  <div class="mt-3">
+                    <div class="justify-content-between align-items-center py-2 border-bottom">
+                        <div class="fw-medium">Sawojajar</div>
+                        <small class="text-success">75%</small>
+                        <div class="progress" style="height: 8px;">
+                          <div class="progress-bar bg-success" role="progressbar" aria-label="Success example" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="justify-content-between align-items-center py-2 border-bottom">
+                        <div class="fw-medium">Kayutangan</div>
+                        <small class="text-success">63%</small>
+                        <div class="progress" style="height: 8px;">
+                          <div class="progress-bar bg-success" role="progressbar" aria-label="success example" style="width: 63%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="justify-content-between align-items-center py-2 border-bottom">
+                        <div class="fw-medium">Kedungkandang</div>
+                        <small class="text-success">55%</small>
+                        <div class="progress" style="height: 8px;">
+                          <div class="progress-bar bg-success" role="progressbar" aria-label="success example" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="justify-content-between align-items-center py-2 border-bottom">
+                        <div class="fw-medium">Klojen</div>
+                        <small class="text-warning">45%</small>
+                        <div class="progress" style="height: 8px;">
+                          <div class="progress-bar bg-warning" role="progressbar" aria-label="warning example" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="justify-content-between align-items-center py-2 border-bottom">
+                        <div class="fw-medium">Blimbing</div>
+                        <small class="text-warning">40%</small>
+                        <div class="progress" style="height: 8px;">
+                          <div class="progress-bar bg-warning" role="progressbar" aria-label="warning example" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="justify-content-between align-items-center py-2 border-bottom">
+                        <div class="fw-medium">Lowokwaru</div>
+                        <small class="text-warning">33%</small>
+                        <div class="progress" style="height: 8px;">
+                          <div class="progress-bar bg-warning" role="progressbar" aria-label="warning example" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="justify-content-between align-items-center pt-2 pb-5">
+                        <div class="fw-medium">Sukun</div>
+                        <small class="text-danger">19%</small>
+                        <div class="progress" style="height: 8px;">
+                          <div class="progress-bar bg-danger" role="progressbar" aria-label="danger example" style="width: 19%" aria-valuenow="19" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="stat-number">150</div>
-              <div class="stat-label">Active Surveyor</div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-md-6 mb-4">
-            <div class="dashboard-card stat-card slide-in-left" style="animation-delay: 0.2s;">
-              <div class="stat-icon" style="background: linear-gradient(135deg, var(--warning-color), #fbbf24);">
-                <i class="fas fa-users"></i>
-              </div>
-              <div class="stat-number">270</div>
-              <div class="stat-label">Active Salesman</div>
             </div>
           </div>
         </div>
 
-        <!-- Charts Section -->
         <div class="row mb-4">
           <div class="col-xl-9 mb-4">
             <div class="dashboard-card fade-in">
               <div class="card-header">
-                <h5 class="card-title">Sales Overview</h5>
-                <div class="dropdown">
-                  <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button">
-                    Last 7 days
-                  </button>
-                </div>
+                  <h5 class="card-title">RealTime Transaction</h5>
+                  <div class="dropdown">
+                      <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="timeRangeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                          Last 30 Mins
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="timeRangeDropdown">
+                          <li><a class="dropdown-item" href="#">Last 30 Mins</a></li>
+                          <li><a class="dropdown-item" href="#">Last Hour</a></li>
+                          <li><a class="dropdown-item" href="#">Today</a></li>
+                      </ul>
+                  </div>
               </div>
-              <div class="chart-container" style="position: relative; height:300px; padding: 20px;">
-                <canvas id="salesStockChart"></canvas>
+              <div class="chart-container">
+                  <canvas id="realtimeTransactionChart"></canvas>
               </div>
-            </div>
           </div>
-          <div class="col-xl-3 mb-4">
-            <div class="dashboard-card fade-in">
-              <div class="card-header">
-                <h5 class="card-title">Top Products</h5>
-              </div>
-              <div class="mt-3">
-                <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
-                  <div>
-                    <div class="fw-medium">iPhone 14 Pro</div>
-                    <small class="text-muted">Apple</small>
-                  </div>
-                  <div class="text-end">
-                    <div class="fw-medium">$1,299</div>
-                    <small class="text-success">+12%</small>
-                  </div>
+          </div>
+            <div class="col-xl-3 mb-4">
+              <div class="dashboard-card fade-in">
+                <div class="card-header">
+                    <h5 class="card-title">Product Delivered</h5>
                 </div>
-                <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
-                  <div>
-                    <div class="fw-medium">MacBook Air</div>
-                    <small class="text-muted">Apple</small>
-                  </div>
-                  <div class="text-end">
-                    <div class="fw-medium">$1,199</div>
-                    <small class="text-success">+8%</small>
-                  </div>
+                <div class="chart-container">
+                    <canvas id="productDeliveredChart"></canvas>
                 </div>
-                <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
-                  <div>
-                    <div class="fw-medium">iPad Pro</div>
-                    <small class="text-muted">Apple</small>
-                  </div>
-                  <div class="text-end">
-                    <div class="fw-medium">$899</div>
-                    <small class="text-success">+15%</small>
-                  </div>
-                </div>
-                <div class="d-flex justify-content-between align-items-center py-2">
-                  <div>
-                    <div class="fw-medium">AirPods Pro</div>
-                    <small class="text-muted">Apple</small>
-                  </div>
-                  <div class="text-end">
-                    <div class="fw-medium">$249</div>
-                    <small class="text-success">+22%</small>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
+        
 
         <!-- Recent Activity -->
         <div class="row">
@@ -924,7 +974,6 @@
                       <th>User</th>
                       <th>Action</th>
                       <th>Date</th>
-                      <th>Status</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -934,13 +983,12 @@
                           <div class="user-avatar me-3" style="width: 30px; height: 30px; font-size: 0.75rem;">AB</div>
                           <div>
                             <div class="fw-medium">Alice Brown</div>
-                            <small class="text-muted">alice@example.com</small>
+                            <small class="text-muted">Surveyor</small>
                           </div>
                         </div>
                       </td>
-                      <td>Created new order</td>
+                      <td>Add new Journey</td>
                       <td>2 minutes ago</td>
-                      <td><span class="badge bg-success">Completed</span></td>
                     </tr>
                     <tr>
                       <td>
@@ -950,13 +998,42 @@
                             CD</div>
                           <div>
                             <div class="fw-medium">Charlie Davis</div>
-                            <small class="text-muted">charlie@example.com</small>
+                            <small class="text-muted">Deliverman</small>
                           </div>
                         </div>
                       </td>
-                      <td>Updated profile</td>
+                      <td>Delivered Beras 5Kg</td>
                       <td>15 minutes ago</td>
-                      <td><span class="badge bg-primary">Active</span></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <div class="user-avatar me-3"
+                            style="width: 30px; height: 30px; font-size: 0.75rem; background: linear-gradient(135deg, var(--warning-color), #fbbf24);">
+                            CD</div>
+                          <div>
+                            <div class="fw-medium">Charlie Davis</div>
+                            <small class="text-muted">Deliverman</small>
+                          </div>
+                        </div>
+                      </td>
+                      <td>Delivered Beras 5Kg</td>
+                      <td>23 minutes ago</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center">
+                          <div class="user-avatar me-3"
+                            style="width: 30px; height: 30px; font-size: 0.75rem; background: linear-gradient(135deg, var(--warning-color), #fbbf24);">
+                            CD</div>
+                          <div>
+                            <div class="fw-medium">Charlie Davis</div>
+                            <small class="text-muted">Deliverman</small>
+                          </div>
+                        </div>
+                      </td>
+                      <td>Delivered Beras 5Kg</td>
+                      <td>30 minutes ago</td>
                     </tr>
                     <tr>
                       <td>
@@ -966,13 +1043,12 @@
                             EF</div>
                           <div>
                             <div class="fw-medium">Eva Foster</div>
-                            <small class="text-muted">eva@example.com</small>
+                            <small class="text-muted">Team Leader</small>
                           </div>
                         </div>
                       </td>
-                      <td>Cancelled subscription</td>
+                      <td>Create New Journey Plan</td>
                       <td>1 hour ago</td>
-                      <td><span class="badge bg-danger">Cancelled</span></td>
                     </tr>
                   </tbody>
                 </table>
@@ -1118,9 +1194,9 @@
           labels: dates,
           datasets: [
             {
-              label: 'Sales',
+              label: 'Deliver',
               data: salesData,
-              borderColor: 'rgba(14, 109, 253, 1)',  // Blue color
+              borderColor: 'rgba(14, 109, 253, 1)', 
               backgroundColor: 'rgba(14, 109, 253, 0.1)',
               borderWidth: 2,
               tension: 0.4,
@@ -1183,5 +1259,195 @@
           }
         }
       });
+
+      const ctxProductDelivered = $('#productDeliveredChart').get(0).getContext('2d');
+            const productData = {
+                labels: ['Beras 5kg', 'Beras 3kg', 'Gula 1kg', 'Minyak Goreng 2L', 'Telur 1kg', 'Mie Instan (Box)'],
+                datasets: [{
+                    label: 'PCS Delivered',
+                    data: [120, 95, 150, 75, 60, 110], 
+                    backgroundColor: [ 
+                        'rgba(13, 110, 253, 0.7)',  // Primary
+                        'rgba(25, 135, 84, 0.7)',  // Success
+                        'rgba(255, 193, 7, 0.7)',   // Warning
+                        'rgba(13, 202, 240, 0.7)',  // Info
+                        'rgba(220, 53, 69, 0.7)',   // Danger
+                        'rgba(108, 117, 125, 0.7)'  // Secondary
+                    ],
+                    borderColor: [ 
+                        'rgba(13, 110, 253, 1)',
+                        'rgba(25, 135, 84, 1)',
+                        'rgba(255, 193, 7, 1)',
+                        'rgba(13, 202, 240, 1)',
+                        'rgba(220, 53, 69, 1)',
+                        'rgba(108, 117, 125, 1)'
+                    ],
+                    borderWidth: 1,
+                    hoverOffset: 8 
+                }]
+            };
+
+            new Chart(ctxProductDelivered, {
+                type: 'doughnut',
+                data: productData,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '60%', 
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                usePointStyle: true,
+                                boxWidth: 10,
+                                padding: 15
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed !== null) {
+                                        label += context.parsed + ' PCS';
+                                    }
+                                    return label;
+                                }
+                            }
+                        },
+                        title: { // Optional: Add a title directly to the chart
+                            display: false, // Set to true to show title
+                            text: 'Product Delivery Breakdown',
+                            padding: {
+                                top: 10,
+                                bottom: 10
+                            },
+                            font: {
+                                size: 16
+                            }
+                        }
+                    }
+                }
+            });
     });
   </script>
+
+<script>
+  $(document).ready(function() {
+      const ctx = $('#realtimeTransactionChart')[0].getContext('2d');
+
+      function formatTime(date) {
+          let hours = date.getHours().toString().padStart(2, '0');
+          let minutes = date.getMinutes().toString().padStart(2, '0');
+          return `${hours}:${minutes}`;
+      }
+
+      const timeLabels = [];
+      const productPcsData = []; 
+      const now = new Date();
+      now.setMinutes(Math.floor(now.getMinutes() / 5) * 5);
+      now.setSeconds(0);
+      now.setMilliseconds(0);
+
+      for (let i = 0; i < 6; i++) { 
+          const pastTime = new Date(now.getTime() - ((5 - i) * 5 * 60 * 1000));
+          timeLabels.push(formatTime(pastTime));
+          productPcsData.push(Math.floor(Math.random() * 150) + 20);
+      }
+
+      const realtimeTransactionChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+              labels: timeLabels,
+              datasets: [{
+                  label: 'PCS Product Deliver',
+                  data: productPcsData,
+                  backgroundColor: 'rgba(13, 110, 253, 0.9)',
+                  borderColor: 'rgba(13, 110, 253, 1)',
+                  borderWidth: 1,
+                  borderRadius: 4,
+                  barPercentage: 0.6,
+                  categoryPercentage: 0.7
+              }]
+          },
+          options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              interaction: {
+                  mode: 'index',
+                  intersect: false,
+              },
+              plugins: {
+                  tooltip: {
+                      mode: 'index',
+                      intersect: false,
+                      backgroundColor: '#fff',
+                      titleColor: '#333',
+                      bodyColor: '#555',
+                      borderColor: '#ddd',
+                      borderWidth: 1,
+                      padding: 10,
+                      cornerRadius: 4,
+                      callbacks: {
+                          label: function(context) {
+                              let label = context.dataset.label || '';
+                              if (label) {
+                                  label += ': ';
+                              }
+                              if (context.parsed.y !== null) {
+                                  label += new Intl.NumberFormat('en-US').format(context.parsed.y) + ' Pcs';
+                              }
+                              return label;
+                          }
+                      }
+                  },
+                  legend: {
+                      display: true,
+                      position: 'top',
+                      labels: {
+                          usePointStyle: true,
+                          boxWidth: 8,
+                          padding: 15,
+                          color: '#333'
+                      }
+                  },
+              },
+              scales: {
+                  x: {
+                      grid: {
+                          display: false
+                      },
+                      ticks: {
+                          color: '#555',
+                          maxRotation: 0,
+                          autoSkip: true,
+                          maxTicksLimit: 6
+                      }
+                  },
+                  y: {
+                      beginAtZero: true,
+                      grid: {
+                          borderDash: [3, 3],
+                          drawBorder: false,
+                          color: '#e0e0e0'
+                      },
+                      ticks: {
+                          color: '#555',
+                          callback: function(value) {
+                              if (Number.isInteger(value)) { 
+                                  if (value >= 1000) {
+                                      return (value / 1000) + 'k';
+                                  }
+                                  return value;
+                              }
+                              return null; 
+                          }
+                      }
+                  }
+              }
+          }
+      });
+  });
+</script>
