@@ -13,7 +13,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
   <!-- Google Fonts -->
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -808,16 +808,16 @@
           <div class="col-12">
             <div class="d-flex justify-content-between align-items-center">
               <div>
-                <h1 class="h3 mb-2" style="color: var(--text-color); font-weight: 600;">List Tipe Produk</h1>
+                <h1 class="h3 mb-2" style="color: var(--text-color); font-weight: 600;">List Absensi Pengirim</h1>
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Tipe Produk</li>
+                    <li class="breadcrumb-item active" aria-current="page">Absensi Pengirim</li>
                   </ol>
                 </nav>
               </div>
               <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addUserModal">
-                <i class="fas fa-plus me-2"></i>Add Tipe Produk
+                <i class="fas fa-plus me-2"></i>Add Absensi Pengirim
               </button>
             </div>
           </div>
@@ -828,10 +828,10 @@
           <div class="col-12">
             <div class="dashboard-card fade-in">
               <div class="card-header">
-                <h5 class="card-title">All Tipe Produk</h5>
+                <h5 class="card-title">All Absensi Pengirim</h5>
                 <div class="d-flex">
                   <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search tipe produk...">
+                    <input type="text" class="form-control" placeholder="Search penerima...">
                     <button class="btn btn-outline-secondary" type="button">
                       <i class="fas fa-search"></i>
                     </button>
@@ -843,16 +843,22 @@
                   <thead>
                     <tr>
                       <th width="5%">No</th>
-                      <th width="35%">Name</th>
-                      <th width="25%">Created</th>
-                      <th width="15%">Actions</th>
+                      <th width="20%">Deliverman</th>
+                      <th width="15%">Status</th>
+                      <th width="15%">Photo</th>
+                      <th width="15%">Date</th>
+                      <th width="10%">Time</th>
+                      <th width="10%">Actions</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td>1</td>
-                      <td>Bahan Pangan</td>
-                      <td>9 Mei 2025</td>
+                      <td>Budiono Siregar</td>
+                      <td><span class="badge bg-success">CHECK-IN</span></td>
+                      <td><a href="#">Link</a></td>
+                      <td>13/03/2025</td> 
+                      <td>06:30</td>
                       <td>
                         <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editUserModal">
                           <i class="fas fa-edit"></i>
@@ -864,8 +870,11 @@
                     </tr>
                     <tr>
                       <td>2</td>
-                      <td>Minuman</td>
-                      <td>11 Mei 2025</td>
+                      <td>Budiono Siregar</td>
+                      <td><span class="badge bg-danger">CHECK-OUT</span></td>
+                      <td><a href="#">Link</a></td>
+                      <td>13/03/2025</td> 
+                      <td>15:45</td>
                       <td>
                         <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editUserModal">
                           <i class="fas fa-edit"></i>
@@ -877,8 +886,91 @@
                     </tr>
                     <tr>
                       <td>3</td>
-                      <td>Pakaian</td>
-                      <td>12 Mei 2025</td>
+                      <td>Kalima Srengenge</td>
+                      <td><span class="badge bg-success">CHECK-IN</span></td>
+                      <td><a href="#">Link</a></td>
+                      <td>13/03/2025</td>
+                      <td>06:30</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editUserModal">
+                          <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
+                          <i class="fas fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Kalima Srengenge</td>
+                      <td><span class="badge bg-danger">CHECK-OUT</span></td>
+                      <td><a href="#">Link</a></td>
+                      <td>13/03/2025</td>
+                      <td>16:15</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editUserModal">
+                          <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
+                          <i class="fas fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>Putri Permatasari</td>
+                      <td><span class="badge bg-success">CHECK-IN</span></td>
+                      <td><a href="#">Link</a></td>
+                      <td>13/03/2025</td>
+                      <td>06:30</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editUserModal">
+                          <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
+                          <i class="fas fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td>Putri Permatasari</td>
+                      <td><span class="badge bg-danger">CHECK-OUT</span></td>
+                      <td><a href="#">Link</a></td>
+                      <td>13/03/2025</td>
+                      <td>15:30</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editUserModal">
+                          <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
+                          <i class="fas fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>7</td>
+                      <td>Julian Moskov</td>
+                      <td><span class="badge bg-success">CHECK-IN</span></td>
+                      <td><a href="#">Link</a></td>
+                      <td>13/03/2025</td>
+                      <td>06:30</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editUserModal">
+                          <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
+                          <i class="fas fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>8</td>
+                      <td>Julian Moskov</td>
+                      <td><span class="badge bg-danger">CHECK-OUT</span></td>
+                      <td><a href="#">Link</a></td>
+                      <td>13/03/2025</td>
+                      <td>16:45</td>
                       <td>
                         <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editUserModal">
                           <i class="fas fa-edit"></i>

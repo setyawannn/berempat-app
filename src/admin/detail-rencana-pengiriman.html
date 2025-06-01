@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Berempat | </title>
+  <title>Berempat | Gudang</title>
 
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
@@ -13,7 +13,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
   <!-- Google Fonts -->
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -759,7 +759,7 @@
           </div>
           <div class="submenu-item">
             <a href="stock-pengirim.html" class="submenu-link">
-              <span>List Stock Pengirim</span>
+              <span>List Rencana Pengiriman</span>
             </a>
           </div>
         </div>
@@ -808,82 +808,231 @@
           <div class="col-12">
             <div class="d-flex justify-content-between align-items-center">
               <div>
-                <h1 class="h3 mb-2" style="color: var(--text-color); font-weight: 600;">List Tipe Produk</h1>
+                <h1 class="h3 mb-2" style="color: var(--text-color); font-weight: 600;">Detail Rencana Pengiriman</h1>
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Tipe Produk</li>
+                    <li class="breadcrumb-item"><a href="rencana-pengiriman.html">Rencana Pengiriman</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Detail</li>
                   </ol>
                 </nav>
               </div>
-              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addUserModal">
-                <i class="fas fa-plus me-2"></i>Add Tipe Produk
-              </button>
+              <div class="d-flex gap-2">
+                <a href="rencana-pengiriman.html" class="btn btn-outline-secondary">
+                  <i class="fas fa-arrow-left me-2"></i>Back
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Users Table -->
-        <div class="row">
-          <div class="col-12">
-            <div class="dashboard-card fade-in">
-              <div class="card-header">
-                <h5 class="card-title">All Tipe Produk</h5>
-                <div class="d-flex">
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search tipe produk...">
-                    <button class="btn btn-outline-secondary" type="button">
-                      <i class="fas fa-search"></i>
-                    </button>
+        <!-- Delivery Plan Details -->
+        <div class="row mb-4">
+          <div class="col-lg-8">
+            <div class="dashboard-card fade-in h-100">
+              <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="card-title mb-0">Delivery Plan Information</h5>
+                <span class="badge bg-success px-3 py-2">In Progress</span>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <div class="d-flex align-items-center mb-4">
+                      <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center" style="width: 64px; height: 64px;">
+                        <i class="fas fa-user text-white fs-4"></i>
+                      </div>
+                      <div class="ms-3">
+                        <h5 class="mb-1">John Doe</h5>
+                        <p class="text-muted mb-0">Deliverman</p>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <p class="text-muted mb-1">Reference Code</p>
+                      <h6>REF-001-2023</h6>
+                    </div>
+                    <div class="mb-3">
+                      <p class="text-muted mb-1">Delivery Date</p>
+                      <h6>13/03/2025</h6>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <div class="mb-3">
+                      <p class="text-muted mb-1">Area</p>
+                      <h6>Sawojajar</h6>
+                    </div>
+                    <div class="mb-3">
+                      <p class="text-muted mb-1">Total Recipients</p>
+                      <h6>12 recipients</h6>
+                    </div>
                   </div>
                 </div>
+                <div class="row mt-2">
+                  <div class="col-12">
+                    <p class="text-muted mb-2">Delivery Progress</p>
+                    <div class="progress" style="height: 10px;">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="d-flex justify-content-between mt-1">
+                      <small>9/12 completed</small>
+                      <small class="text-success">75%</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="dashboard-card fade-in h-100">
+              <div class="card-header">
+                <h5 class="card-title mb-0">Delivery Status</h5>
+              </div>
+              <div class="card-body">
+                <div class="mb-4">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h6 class="mb-0">Current Status</h6>
+                    <span class="badge bg-success">Active</span>
+                  </div>
+                  <p class="text-muted small mb-0">Last updated: Today, 10:45 AM</p>
+                </div>
+                <div class="mb-4">
+                  <h6 class="mb-2">Delivery Timeline</h6>
+                  <div class="d-flex mb-2">
+                    <div class="me-3">
+                      <div class="bg-success rounded-circle" style="width: 12px; height: 12px;"></div>
+                      <div class="bg-light" style="width: 2px; height: 30px; margin-left: 5px;"></div>
+                    </div>
+                    <div>
+                      <p class="mb-0 small fw-semibold">Delivery Started</p>
+                      <p class="text-muted small mb-0">13/03/2025, 06:30 AM</p>
+                    </div>
+                  </div>
+                  <div class="d-flex mb-2">
+                    <div class="me-3">
+                      <div class="bg-success rounded-circle" style="width: 12px; height: 12px;"></div>
+                      <div class="bg-light" style="width: 2px; height: 30px; margin-left: 5px;"></div>
+                    </div>
+                    <div>
+                      <p class="mb-0 small fw-semibold">In Progress</p>
+                      <p class="text-muted small mb-0">13/03/2025, 09:45 AM</p>
+                    </div>
+                  </div>
+                  <div class="d-flex">
+                    <div class="me-3">
+                      <div class="bg-light rounded-circle border border-secondary" style="width: 12px; height: 12px;"></div>
+                    </div>
+                    <div>
+                      <p class="mb-0 small fw-semibold">Delivery Completed</p>
+                      <p class="text-muted small mb-0">Pending</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-success">
+                    <i class="fas fa-check-circle me-2"></i>Mark as Complete
+                  </button>
+                  <button class="btn btn-outline-danger">
+                    <i class="fas fa-times-circle me-2"></i>Cancel Delivery
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Penerima Manfaat Section -->
+        <div class="row mb-4">
+          <div class="col-12">
+            <div class="dashboard-card fade-in">
+              <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="card-title mb-0">Penerima Manfaat</h5>
+                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addPenerimaModal">
+                  <i class="fas fa-plus me-2"></i>Add Penerima
+                </button>
               </div>
               <div class="table-responsive">
                 <table class="table table-hover">
                   <thead>
                     <tr>
                       <th width="5%">No</th>
-                      <th width="35%">Name</th>
-                      <th width="25%">Created</th>
-                      <th width="15%">Actions</th>
+                      <th width="20%">Nama Penerima</th>
+                      <th width="20%">Area</th>
+                      <th width="20%">Koordinat</th>
+                      <th width="15%">Status</th>
+                      <th width="10%">Actions</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td>1</td>
-                      <td>Bahan Pangan</td>
-                      <td>9 Mei 2025</td>
+                      <td>Ahmad Sulaiman</td>
+                      <td>Sawojajar</td>
+                      <td>-7.929241, 112.624012</td>
+                      <td><span class="badge bg-success">Delivered</span></td>
                       <td>
-                        <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editUserModal">
+                        <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editPenerimaModal">
                           <i class="fas fa-edit"></i>
                         </button>
-                        <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
+                        <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deletePenerimaModal">
                           <i class="fas fa-trash"></i>
                         </button>
                       </td>
                     </tr>
                     <tr>
                       <td>2</td>
-                      <td>Minuman</td>
-                      <td>11 Mei 2025</td>
+                      <td>Siti Aminah</td>
+                      <td>Sawojajar</td>
+                      <td>-7.928541, 112.623982</td>
+                      <td><span class="badge bg-success">Delivered</span></td>
                       <td>
-                        <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editUserModal">
+                        <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editPenerimaModal">
                           <i class="fas fa-edit"></i>
                         </button>
-                        <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
+                        <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deletePenerimaModal">
                           <i class="fas fa-trash"></i>
                         </button>
                       </td>
                     </tr>
                     <tr>
                       <td>3</td>
-                      <td>Pakaian</td>
-                      <td>12 Mei 2025</td>
+                      <td>Budi Santoso</td>
+                      <td>Sawojajar</td>
+                      <td>-7.927841, 112.624512</td>
+                      <td><span class="badge bg-success">Delivered</span></td>
                       <td>
-                        <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editUserModal">
+                        <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editPenerimaModal">
                           <i class="fas fa-edit"></i>
                         </button>
-                        <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
+                        <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deletePenerimaModal">
+                          <i class="fas fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Dewi Lestari</td>
+                      <td>Sawojajar</td>
+                      <td>-7.928941, 112.625012</td>
+                      <td><span class="badge bg-warning text-dark">Pending</span></td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editPenerimaModal">
+                          <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deletePenerimaModal">
+                          <i class="fas fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>Hendra Wijaya</td>
+                      <td>Sawojajar</td>
+                      <td>-7.929641, 112.625412</td>
+                      <td><span class="badge bg-warning text-dark">Pending</span></td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editPenerimaModal">
+                          <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deletePenerimaModal">
                           <i class="fas fa-trash"></i>
                         </button>
                       </td>
@@ -891,21 +1040,145 @@
                   </tbody>
                 </table>
               </div>
-              <div class="card-footer">
-                <nav aria-label="Page navigation">
-                  <ul class="pagination justify-content-end mb-0">
-                    <li class="page-item disabled">
-                      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-                    </li>
-                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">Next</a>
-                    </li>
-                  </ul>
-                </nav>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map and Products Section -->
+        <div class="row">
+          <div class="col-lg-8 mb-4">
+            <div class="dashboard-card fade-in h-100">
+              <div class="card-header">
+                <h5 class="card-title mb-0">Delivery Route Map</h5>
               </div>
+              <div class="card-body">
+                <div class="bg-light rounded" style="height: 400px; display: flex; align-items: center; justify-content: center;">
+                  <div class="text-center">
+                    <i class="fas fa-map-marked-alt fa-4x text-muted mb-3"></i>
+                    <h6 class="text-muted">Interactive Map View</h6>
+                    <p class="small text-muted">Shows delivery route and recipient locations</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4">
+            <div class="dashboard-card fade-in h-100">
+              <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="card-title mb-0">Products for Delivery</h5>
+                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addProductModal">
+                  <i class="fas fa-plus me-1"></i>
+                </button>
+              </div>
+              <div class="card-body p-0">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div>
+                      <h6 class="mb-0">Beras 5kg</h6>
+                      <small class="text-muted">12 units</small>
+                    </div>
+                    <button class="btn btn-sm btn-outline-danger">
+                      <i class="fas fa-times"></i>
+                    </button>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div>
+                      <h6 class="mb-0">Minyak Goreng 1L</h6>
+                      <small class="text-muted">24 units</small>
+                    </div>
+                    <button class="btn btn-sm btn-outline-danger">
+                      <i class="fas fa-times"></i>
+                    </button>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div>
+                      <h6 class="mb-0">Gula 1kg</h6>
+                      <small class="text-muted">12 units</small>
+                    </div>
+                    <button class="btn btn-sm btn-outline-danger">
+                      <i class="fas fa-times"></i>
+                    </button>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div>
+                      <h6 class="mb-0">Tepung Terigu 1kg</h6>
+                      <small class="text-muted">12 units</small>
+                    </div>
+                    <button class="btn btn-sm btn-outline-danger">
+                      <i class="fas fa-times"></i>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="card-footer bg-white">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fw-semibold">Total Items:</span>
+                  <span class="fw-semibold">60 units</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add Penerima Modal -->
+      <div class="modal fade" id="addPenerimaModal" tabindex="-1" aria-labelledby="addPenerimaModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="addPenerimaModalLabel">Add Penerima Manfaat</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="namaPenerima" class="form-label">Nama Penerima</label>
+                  <input type="text" class="form-control" id="namaPenerima" placeholder="Enter name">
+                </div>
+                <div class="mb-3">
+                  <label for="areaPenerima" class="form-label">Area</label>
+                  <select class="form-select" id="areaPenerima">
+                    <option selected>Select area</option>
+                    <option value="Sawojajar">Sawojajar</option>
+                    <option value="Kayutangan">Kayutangan</option>
+                    <option value="Blimbing">Blimbing</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="koordinatPenerima" class="form-label">Koordinat</label>
+                  <input type="text" class="form-control" id="koordinatPenerima" placeholder="Latitude, Longitude">
+                </div>
+                <div class="mb-3">
+                  <label for="statusPenerima" class="form-label">Status</label>
+                  <select class="form-select" id="statusPenerima">
+                    <option value="pending">Pending</option>
+                    <option value="delivered">Delivered</option>
+                  </select>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary">Add Penerima</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Delete Penerima Modal -->
+      <div class="modal fade" id="deletePenerimaModal" tabindex="-1" aria-labelledby="deletePenerimaModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="deletePenerimaModalLabel">Confirm Delete</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p class="mb-0">Are you sure you want to delete this recipient?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-danger">Delete</button>
             </div>
           </div>
         </div>

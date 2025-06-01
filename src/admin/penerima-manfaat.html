@@ -13,7 +13,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
   <!-- Google Fonts -->
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -808,16 +808,16 @@
           <div class="col-12">
             <div class="d-flex justify-content-between align-items-center">
               <div>
-                <h1 class="h3 mb-2" style="color: var(--text-color); font-weight: 600;">List Tipe Produk</h1>
+                <h1 class="h3 mb-2" style="color: var(--text-color); font-weight: 600;">List Penerima Manfaat</h1>
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Tipe Produk</li>
+                    <li class="breadcrumb-item active" aria-current="page">Penerima Manfaat</li>
                   </ol>
                 </nav>
               </div>
               <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addUserModal">
-                <i class="fas fa-plus me-2"></i>Add Tipe Produk
+                <i class="fas fa-plus me-2"></i>Add Penerima Manfaat
               </button>
             </div>
           </div>
@@ -828,10 +828,10 @@
           <div class="col-12">
             <div class="dashboard-card fade-in">
               <div class="card-header">
-                <h5 class="card-title">All Tipe Produk</h5>
+                <h5 class="card-title">All Penerima Manfaat</h5>
                 <div class="d-flex">
                   <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search tipe produk...">
+                    <input type="text" class="form-control" placeholder="Search penerima...">
                     <button class="btn btn-outline-secondary" type="button">
                       <i class="fas fa-search"></i>
                     </button>
@@ -843,16 +843,20 @@
                   <thead>
                     <tr>
                       <th width="5%">No</th>
-                      <th width="35%">Name</th>
-                      <th width="25%">Created</th>
-                      <th width="15%">Actions</th>
+                      <th width="20%">Nama Penerima</th>
+                      <th width="15%">Kategori</th>
+                      <th width="15%">Koordinat</th>
+                      <th width="10%">status</th>
+                      <th width="10%">Actions</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td>1</td>
-                      <td>Bahan Pangan</td>
-                      <td>9 Mei 2025</td>
+                      <td>Budiono Siregar</td>
+                      <td>Bantuan Keluarga Miskin</td>
+                      <td>-7.929241729513513, 112.62401235119157</td>
+                      <td><span class="badge bg-success">Approved</span></td>
                       <td>
                         <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editUserModal">
                           <i class="fas fa-edit"></i>
@@ -864,8 +868,10 @@
                     </tr>
                     <tr>
                       <td>2</td>
-                      <td>Minuman</td>
-                      <td>11 Mei 2025</td>
+                      <td>Kalima Srengenge</td>
+                      <td>Bantuan Keluarga Miskin</td>
+                      <td>-7.929241729513513, 112.62401235119157</td>
+                      <td><span class="badge bg-success">Approved</span></td>
                       <td>
                         <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editUserModal">
                           <i class="fas fa-edit"></i>
@@ -877,8 +883,25 @@
                     </tr>
                     <tr>
                       <td>3</td>
-                      <td>Pakaian</td>
-                      <td>12 Mei 2025</td>
+                      <td>Putri Permatasari</td>
+                      <td>Ibu Hamil</td>
+                      <td>-7.929241729513513, 112.62401235119157</td>
+                      <td><span class="badge bg-success">Approved</span></td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editUserModal">
+                          <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
+                          <i class="fas fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Julian Moskov</td>
+                      <td>Penyandang Disabilitas Berat</td>
+                      <td>28.455127927184847, 103.33217016953395</td>
+                      <td><span class="badge bg-danger">Rejected</span></td>
                       <td>
                         <button class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#editUserModal">
                           <i class="fas fa-edit"></i>
