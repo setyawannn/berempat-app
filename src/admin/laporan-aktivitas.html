@@ -4,15 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Berempat | </title>
+  <title>Berempat | Laporan Aktivitas</title>
 
-  <!-- Bootstrap 5 CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Font Awesome Icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -125,22 +122,22 @@
       position: relative;
     }
 
-    .has-submenu > .menu-link {
+    .has-submenu>.menu-link {
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
-    .has-submenu > .menu-link::after {
+    .has-submenu>.menu-link::after {
       content: '\f107';
       font-family: 'Font Awesome 5 Free';
       font-weight: 900;
       margin-left: 10px;
       transition: transform 0.3s ease;
-      flex-shrink: 0; 
+      flex-shrink: 0;
     }
 
-    .has-submenu.open > .menu-link::after {
+    .has-submenu.open>.menu-link::after {
       transform: rotate(180deg);
     }
 
@@ -209,7 +206,7 @@
       padding: 0.6rem 1rem;
     }
 
-    .menu-item.has-active-submenu > .menu-link {
+    .menu-item.has-active-submenu>.menu-link {
       background: var(--primary-color);
       color: white;
       opacity: 0.85;
@@ -416,11 +413,6 @@
       font-weight: 600;
     }
 
-    .user-img  {
-      width: auto;
-    }
-
-
     /* Content Area */
     .content-area {
       padding: 2rem;
@@ -614,10 +606,8 @@
 </head>
 
 <body>
-  <!-- Sidebar Overlay for Mobile -->
   <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-  <!-- Sidebar -->
   <nav class="sidebar" id="sidebar">
     <div class="sidebar-header">
       <a href="#" class="sidebar-brand">
@@ -639,7 +629,7 @@
         </a>
         <div class="submenu">
           <div class="submenu-item">
-            <a href="users-list.html" class="submenu-link active">
+            <a href="users-list.html" class="submenu-link">
               <span>List User</span>
             </a>
           </div>
@@ -650,14 +640,14 @@
           </div>
         </div>
       </div>
-      <div class="menu-item has-submenu">
+      <div class="menu-item has-submenu open has-active-submenu">
         <a href="#" class="menu-link">
           <i class="fas fa-file-alt"></i>
           <span class="menu-text">Laporan</span>
         </a>
-        <div class="submenu">
+        <div class="submenu open">
           <div class="submenu-item">
-            <a href="laporan-aktivitas.html" class="submenu-link">
+            <a href="laporan-aktivitas.html" class="submenu-link active">
               <span>Aktivitas Pengiriman</span>
             </a>
           </div>
@@ -666,7 +656,6 @@
               <span>Kehadiran Pengiriman</span>
             </a>
           </div>
-          
         </div>
       </div>
       <div class="menu-item has-submenu">
@@ -700,7 +689,7 @@
           </div>
           <div class="submenu-item">
             <a href="area.html" class="submenu-link">
-              <span>Area</span>
+              <span>Kecamatan</span>
             </a>
           </div>
           <div class="submenu-item">
@@ -761,7 +750,8 @@
             <a href="gudang-list.html" class="submenu-link">
               <span>List Gudang</span>
             </a>
-          </div>
+          </a>
+        </div>
           <div class="submenu-item">
             <a href="stock-pengirim.html" class="submenu-link">
               <span>List Stock Pengirim</span>
@@ -772,9 +762,7 @@
     </div>
   </nav>
 
-  <!-- Main Content -->
   <div class="main-content" id="mainContent">
-    <!-- Top Navbar -->
     <header class="top-navbar">
       <div class="navbar-left">
         <button class="sidebar-toggle" id="sidebarToggle">
@@ -805,19 +793,17 @@
       </div>
     </header>
 
-    <!-- Content Area -->
     <main class="content-area">
       <div class="container-fluid">
-        <!-- Page Title and Breadcrumb -->
         <div class="row mb-4">
           <div class="col-12">
             <div class="d-flex justify-content-between align-items-center">
               <div>
-                <h1 class="h3 mb-2" style="color: var(--text-color); font-weight: 600;">My Profile</h1>
+                <h1 class="h3 mb-2" style="color: var(--text-color); font-weight: 600;">Laporan Aktivitas Pengiriman</h1>
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">My Profile</li>
+                    <li class="breadcrumb-item active" aria-current="page">Aktivitas Pengiriman</li>
                   </ol>
                 </nav>
               </div>
@@ -825,65 +811,167 @@
           </div>
         </div>
 
-        <!-- Users Table -->
         <div class="row">
           <div class="col-12">
             <div class="dashboard-card fade-in">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img class="w-100 rounded-2" src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                    </div>
-                    <div class="col-md-8">
-                        <form>
-                            <div class="mb-3">
-                                <label for="editName" class="form-label">Full Name</label>
-                                <input type="text" class="form-control" id="editName" value="John Doe">
-                            </div>
-                            <div class="mb-3">
-                                <label for="editEmail" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="editEmail" value="john@example.com">
-                            </div>
-                            <div class="mb-3">
-                                <label for="editUsername" class="form-label">Username</label>
-                                <input type="text" class="form-control" id="editUsername" value="johndoe">
-                            </div>
-                            <div class="mb-3">
-                                <label for="editPassword" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="editPassword" placeholder="Leave blank to keep current password">
-                            </div>
-                            <div class="mb-3">
-                                <label for="editRole" class="form-label">Role</label>
-                                <select class="form-select" id="editRole">
-                                    <option value="admin" selected>Admin</option>
-                                    <option value="team_leader">Team Leader</option>
-                                    <option value="warehouse_manager">Warehouse Manager</option>
-                                    <option value="surveyor">Surveyor</option>
-                                    <option value="deliverman">Deliverman</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label for="img" class="form-label">Photo Profile</label>
-                                <input class="form-control" type="file" id="img">
-                            </div>
-                            <div class="float-end">
-                                <button type="submit" class="btn btn-primary">Save Changes</button>
-                            </div>
-                        </form>
-                    </div> 
+              <div class="card-header">
+                <h5 class="card-title">Semua Aktivitas Pengiriman</h5>
+                <div class="d-flex">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Cari aktivitas...">
+                    <button class="btn btn-outline-secondary" type="button">
+                      <i class="fas fa-search"></i>
+                    </button>
+                  </div>
                 </div>
-                               
+              </div>
+              <div class="table-responsive">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th width="5%">No</th>
+                      <th>Nama Pengirim</th>
+                      <th>Lokasi Pengiriman</th>
+                      <th>Produk</th>
+                      <th>Waktu & Tanggal</th>
+                      <th width="10%">Status</th>
+                      <th width="10%">Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Budi Santoso</td>
+                      <td>-7.929241729513513, 112.62401235119157</td>
+                      <td>
+                        <ul>
+                          <li>Beras 5kg</li>
+                          <li>Minyak Goreng 2L</li>
+                        </ul>
+                      </td>
+                      <td>10:30, 2025-05-30</td>
+                      <td><span class="badge bg-success">Terkirim</span></td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-success me-1" title="Lihat Detail">
+                          <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-danger" title="Hapus">
+                          <i class="fas fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Ani Rahayu</td>
+                      <td>-7.2575, 112.7521</td>
+                      <td>
+                        <ul>
+                          <li>Mie Instan (1 Dus)</li>
+                          <li>Gula Pasir 1kg</li>
+                          <li>Kopi Bubuk 250gr</li>
+                        </ul>
+                      </td>
+                      <td>11:45, 2025-05-30</td>
+                      <td><span class="badge bg-warning text-dark">Tertunda</span></td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-success me-1" title="Lihat Detail">
+                          <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-danger" title="Hapus">
+                          <i class="fas fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Candra Wijaya</td>
+                      <td>-7.8427, 112.0125</td>
+                      <td>
+                        <ul>
+                          <li>Telur (1 Tray)</li>
+                        </ul>
+                      </td>
+                      <td>14:00, 2025-05-29</td>
+                      <td><span class="badge bg-success">Terkirim</span></td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-success me-1" title="Lihat Detail">
+                          <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-danger" title="Hapus">
+                          <i class="fas fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Dewi Lestari</td>
+                      <td>-6.2088, 106.8456</td>
+                      <td>
+                        <ul>
+                          <li>Susu UHT 1L</li>
+                          <li>Roti Tawar</li>
+                        </ul>
+                      </td>
+                      <td>09:15, 2025-05-29</td>
+                      <td><span class="badge bg-danger">Gagal</span></td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-success me-1" title="Lihat Detail">
+                          <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-danger" title="Hapus">
+                          <i class="fas fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>Faisal Hadi</td>
+                      <td>-6.9175, 107.6191</td>
+                      <td>
+                        <ul>
+                          <li>Sabun Mandi</li>
+                          <li>Shampo</li>
+                          <li>Pasta Gigi</li>
+                        </ul>
+                      </td>
+                      <td>16:00, 2025-05-28</td>
+                      <td><span class="badge bg-success">Terkirim</span></td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-success me-1" title="Lihat Detail">
+                          <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-danger" title="Hapus">
+                          <i class="fas fa-trash"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    </tbody>
+                </table>
+              </div>
+              <div class="card-footer">
+                <nav aria-label="Page navigation">
+                  <ul class="pagination justify-content-end mb-0">
+                    <li class="page-item disabled">
+                      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">Next</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
     </main>
   </div>
 
-  <!-- jQuery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-  <!-- Bootstrap 5 JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 
   <script>
@@ -910,7 +998,7 @@
       $('.has-submenu > .menu-link').on('click', function (e) {
         e.preventDefault();
         const parent = $(this).parent();
-        
+
         if (!$('#sidebar').hasClass('collapsed')) {
           parent.toggleClass('open');
           parent.find('.submenu').toggleClass('open');
@@ -920,46 +1008,47 @@
       function setActiveMenu() {
         const currentUrl = window.location.pathname;
         const filename = currentUrl.substring(currentUrl.lastIndexOf('/') + 1);
-        
+
         $('.menu-link, .submenu-link').removeClass('active');
         $('.menu-item').removeClass('has-active-submenu');
-        
-        $('.menu-link').each(function() {
+
+        let foundActive = false;
+
+        $('.menu-link').each(function () {
           const href = $(this).attr('href');
-          if (href === filename || href === currentUrl) {
+          if (href === filename || currentUrl.includes(href) && href !== '#') { 
             $(this).addClass('active');
+            foundActive = true;
           }
         });
-        
-        $('.submenu-link').each(function() {
+
+        // Check submenu links
+        $('.submenu-link').each(function () {
           const href = $(this).attr('href');
-          if (href === filename || href === currentUrl) {
+          if (href === filename || currentUrl.includes(href) && href !== '#') { 
             $(this).addClass('active');
-            $(this).closest('.menu-item').addClass('has-active-submenu');
-            if (!$('#sidebar').hasClass('collapsed')) {
-              $(this).closest('.submenu').addClass('open');
-              $(this).closest('.has-submenu').addClass('open');
-            }
+            $(this).closest('.menu-item').addClass('has-active-submenu open');
+            $(this).closest('.submenu').addClass('open');
+            foundActive = true;
           }
         });
-        
-        if (!$('.menu-link.active, .submenu-link.active').length) {
-          $('[href="index.html"]').addClass('active');
-        }
       }
-      
+
       setActiveMenu();
-      
+
       $('.menu-link:not(.has-submenu > .menu-link), .submenu-link').on('click', function (e) {
         if ($(this).attr('href') === '#') {
-          e.preventDefault();
+          e.preventDefault(); 
         }
 
         $('.menu-link, .submenu-link').removeClass('active');
         $(this).addClass('active');
-        
+
         if ($(this).hasClass('submenu-link')) {
           $(this).closest('.menu-item').addClass('has-active-submenu');
+        } else {
+          $('.menu-item.has-active-submenu').removeClass('has-active-submenu open');
+          $('.submenu.open').removeClass('open');
         }
 
         $(this).addClass('slide-in-left');
@@ -979,5 +1068,7 @@
         $(this).parent().removeClass('focused');
       });
     });
-
   </script>
+</body>
+
+</html>
